@@ -1,3 +1,4 @@
+import 'package:dhopa_app/Screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'SignUpScreen.dart';
@@ -37,6 +38,7 @@ class _loginScreenState extends State<loginScreen> {
           decoration: BoxDecoration(
             color: Colors.white,
             image: DecorationImage(
+                fit: BoxFit.fill,
               image: AssetImage("assets/images/bg.png")
             )
           ),
@@ -161,7 +163,10 @@ class _loginScreenState extends State<loginScreen> {
     return Container(
       margin: EdgeInsets.only(left:20, right: 20),
       child: InkWell(
-        onTap: (){},
+        onTap: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=> HomeScreen()));
+
+        },
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 10),
           width: MediaQuery.of(context).size.width,

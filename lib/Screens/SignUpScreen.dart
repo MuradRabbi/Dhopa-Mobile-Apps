@@ -36,23 +36,32 @@ class _signupscreenState extends State<signupscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height:50),
-            _buildLogoSection(),
-            SizedBox(height:70 ,),
-            _buildSignUpTextSection(),
-            SizedBox(height:35),
-            _buildInputSection(),
-            SizedBox(height:20),
-            _buildSignUpButton(),
-            SizedBox(height:70 ,),
-            _buildHaveAccountLoginButton(),
-            SizedBox(height: 20,),
+        child: Container(
+          decoration: BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                 fit: BoxFit.fill,
+                  image: AssetImage("assets/images/bg.png")
+              )
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height:50),
+              _buildLogoSection(),
+              SizedBox(height:70 ,),
+              _buildSignUpTextSection(),
+              SizedBox(height:35),
+              _buildInputSection(),
+              SizedBox(height:20),
+              _buildSignUpButton(),
+              SizedBox(height:70 ,),
+              _buildHaveAccountLoginButton(),
+              SizedBox(height: 20,),
 
 
-          ],
+            ],
+          ),
         ),
       ),
     );
